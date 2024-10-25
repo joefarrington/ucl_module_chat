@@ -32,7 +32,7 @@ rag_prompt = """You are an assistant for question-answering tasks related
         Do not refer to the context directly in your answer, but you
         should use it to answer the question. 
         You can ask the user if they would like to know more about a 
-        specific area if you think it may be helpful.
+        specific module or modules if you think it may be helpful.
         \n\n
         {context}"""
 
