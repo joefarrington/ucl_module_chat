@@ -4,8 +4,8 @@ import omegaconf
 from dotenv import load_dotenv
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage
 
-from ucl_module_chat.chains.rag_chain import build_rag_chain
-from ucl_module_chat.utils.resolve_paths import get_abs_path_using_repo_root
+from src.ucl_module_chat.chains.rag_chain import build_rag_chain
+from src.ucl_module_chat.utils.resolve_paths import get_abs_path_using_repo_root
 
 load_dotenv()
 
