@@ -45,7 +45,6 @@ uv pip install .
 export OPENAI_API_KEY=<Your API key>
 
 # Run the app
-cd src/ucl_module_chat
 python app.py
 ```
 
