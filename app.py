@@ -21,10 +21,12 @@ for accurate and up-to-date information.
 """
 
 examples = [
-    "When can I take a module on medical statistics?",
-    "What are the prerequisites for taking Supervised Learning?",
-    "What is the difference between the two modules on Trauma for \
-        paediatric dentistry?",
+    {"text": "When can I take a module on medical statistics?"},
+    {"text": "What are the prerequisites for taking Supervised Learning?"},
+    {
+        "text": "What is the difference between the two modules on Trauma for \
+        paediatric dentistry?"
+    },
 ]
 
 
