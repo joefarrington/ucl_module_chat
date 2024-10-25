@@ -20,19 +20,6 @@ Please refer to the official [UCL module catalogue](https://www.ucl.ac.uk/module
 for accurate and up-to-date information.
 """
 
-examples = [
-    {"role": "user", "content": "When can I take a module on medical statistics?"},
-    {
-        "role": "user",
-        "content": "What are the prerequisites for taking Supervised Learning?",
-    },
-    {
-        "role": "user",
-        "content": "What is the difference between the two modules on Trauma for \
-        paediatric dentistry?",
-    },
-]
-
 
 def convert_history(history: list[dict]) -> list[BaseMessage]:
     """Convert conversation history into Langchain messages"""
@@ -70,7 +57,6 @@ def main(cfg: omegaconf.DictConfig) -> None:
         gr.ChatInterface(
             fn=chat,
             type="messages",
-            examples=examples,
         )
 
     module_chat.launch()
