@@ -1,2 +1,4 @@
-env:
-  - PYTHONPATH: src
+python:
+  version: 3.12.5
+  setup: |
+    pip install .
