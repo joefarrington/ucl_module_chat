@@ -5,7 +5,7 @@ colorFrom: blue
 colorTo: indigo
 sdk: gradio
 sdk_version: "4.44.1"
-app_file: app.py
+app_file: src/ucl_module_chat/app.py
 pinned: false
 ---
 
@@ -45,6 +45,7 @@ uv pip install .
 export OPENAI_API_KEY=<Your API key>
 
 # Run the app
+cd src/ucl_module_chat
 python app.py
 ```
 
