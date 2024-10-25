@@ -1,0 +1,29 @@
+defaults:
+  - override hydra/job_logging: disabled
+
+# All paths are specified relative to the root of the project
+
+setup:
+  scrape_documents:
+    index_page_url: "https://search.ucl.ac.uk/s/search.html?collection=drupal-module-catalogue&facetsort=alpha&num_ranks=10000&daat=10000&form=ucl&start_rank=0"
+    output_dir: 'data/module_html'
+    regex_url_pattern: 'https://www.ucl.ac.uk/module-catalogue/modules/[a-zA-Z0-9-]+[A-Z]{4}\d{4}'
+    wait_time_seconds: 2
+  convert_documents:
+    input_dir: ${setup.scrape_documents.output_dir}
+    output_dir: 'data/module_md'
+  embed_documents:
+    input_dir: ${setup.convert_documents.output_dir}
+    output_dir: ${vectorstore.dir}
+
+vectorstore:
+  dir: 'data/module_catalogue_vectorstore'
+  
+models:
+  embedding:
+    _target_: langchain_openai.OpenAIEmbeddings
+    model: text-embedding-3-small
+  
+  llm:
+    _target_: langchain_openai.ChatOpenAI
+    model: gpt-4o-mini
