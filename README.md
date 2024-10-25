@@ -23,7 +23,7 @@ The code is licensed under Apache License 2.0 but the module catalogue content i
 
 ### Hugging Face Space
 
-The easiest way to chat with the model is using the Hugging Face space.
+The easiest way to chat with the model is using the [Hugging Face space](https://huggingface.co/spaces/joefarrington/ucl_module_chat).
 
 ### Local use
 
